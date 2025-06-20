@@ -1,65 +1,7 @@
 ## Overview
-A high-performance copy trading bot for PumpFun DEX on Solana, written in Rust 🦀. The bot monitors specific wallets and automatically replicates their trading activities with configurable parameters and advanced features like Jito MEV integration.
+First snipe  newly migrating token in pump swap and implement progressive buying and selling
 
-# Solana PumpFun Copy Trading Bot in Rust 🚀
-
-## Key Features
-
-### 🚀 Performance & Architecture
-- **Rust-Powered Performance**: Built with Rust for optimal speed and memory safety
-- **Dual Monitoring Modes**: 
-  - gRPC streaming via Yellowstone/InstantNodes
-  - WebSocket-based wallet monitoring
-- **Asynchronous Architecture**: Using Tokio for non-blocking operations
-
-### 🔒 Security & Configuration
-- **Environment-Based Setup**: Secure configuration via `.env` file
-- **Robust Error Handling**: Comprehensive error management and logging
-- **Configurable Parameters**: Customizable slippage, amounts, and monitoring settings
-
-### 📊 Trading Features
-- **Smart Copy Trading**: 
-  - Automatic trade detection and replication
-  - Configurable trade size (default: 50% of detected amount)
-  - Support for both buy and sell operations
-- **PumpFun DEX Integration**: 
-  - Direct interaction with PumpFun bonding curves
-  - Automatic token account creation and management
-- **Jito MEV Integration**: Enhanced transaction priority
-
-## Directory Structure
-
-```
-src/
-├── common/                 # Common utilities and shared components
-│   ├── logger.rs          # Logging system with colored output
-│   └── utils.rs           # Configuration and utility functions
-├── dex/                   # DEX integration components
-│   └── pump_fun.rs        # PumpFun DEX interaction logic
-├── engine/                # Core trading engine
-│   └── monitor/           # Transaction monitoring systems
-│       ├── grpc_monitor.rs    # gRPC-based monitoring
-│       └── wallet_monitor.rs  # WebSocket-based monitoring
-├── services/              # External service integrations
-│   └── jito.rs           # Jito MEV service integration
-└── proto/                 # Protocol definitions
-    └── instantnode.rs     # InstantNode gRPC client implementation
-```
-
-## Environment Variables
-
-```env
-# Required Configuration
-PRIVATE_KEY=<your_base58_private_key>
-RPC_HTTPS=<your_rpc_endpoint>
-RPC_WSS=<your_websocket_endpoint>
-RPC_GRPC=<your_grpc_endpoint>
-RPC_TOKEN=<your_rpc_auth_token>
-
-# Optional Configuration
-SLIPPAGE=10               # Slippage tolerance in percentage
-LOG_LEVEL=debug          # Logging level (debug/info/error)
-```
+# Pump swap detect new migration bot 🚀
 
 ## Usage
 
